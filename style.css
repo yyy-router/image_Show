@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #A3CB38;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    user-select: none;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+.container p {
+    letter-spacing: 10px;
+    font-size: 20px;
+    color: #FFFFFF;
+    z-index: 10;
+}
+
+.container img {
+    width: 400px;
+    height: 150px;
+    transition: all 500ms ease-out;
+}
+
+.mask {
+    z-index: 20;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #8395a7;
+    display: none;
+    opacity: 0.8;
+}
+
+/* 图片被点击后的样式 */
+.active {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc((100vh-400px)/2);
+    z-index: 200;
+    width: 800px !important;
+    height: 400px !important;
+}
